@@ -1,39 +1,37 @@
-📉 **Customer Churn Analysis**
+ Customer Churn Prediction & Analysis
 
-Some customers leave without a word. This project figures out who — before they do.
+Analyzes customer behavior to find why customers leave, applies machine
+learning to predict churn, and presents the findings in a dashboard for
+stakeholders.
 
-Customer churn analysis is the difference between reacting to lost revenue and preventing it. This project explores customer behavior data to uncover why customers leave, builds a predictive model to flag who's likely to leave next, and turns those insights into something a business team can actually act on.
+ Objective
+- Identify the key drivers behind customer churn
+- Predict which customers are likely to churn
+- Present insights in a form a business team can act on
 
-🎯 Objective
-Identify the key drivers behind customer churn
-Build a model that predicts churn risk before a customer leaves
-Translate findings into actionable retention strategies
-🗂️ Dataset
-	
-**Source:** Telco Customer Churn dataset (Kaggle)
-Rows	e.g. 7,000+ customer records
-Features	Demographics, subscription/contract details, usage patterns, billing history
-Target	Churn (Yes/No)
-🔍 **Project Workflow**
-Data Cleaning — handle missing values, fix data types, remove duplicates
-Exploratory Data Analysis (EDA) — uncover patterns in tenure, contract type, billing, and support interactions that correlate with churn
-Feature Engineering — encode categorical variables, create derived features (e.g. tenure buckets, spend-per-month)
-Modeling — train and compare classification models to predict churn
-Evaluation — assess models using metrics suited to imbalanced classification
-Insights & Recommendations — translate model output into retention actions
-🧠 **Models Used**
-Model	Purpose
-Logistic Regression	Baseline, interpretable churn probability
-Random Forest	Captures non-linear patterns, feature importance
-XGBoost / Gradient Boosting	Higher-performance benchmark
+ Dataset
+- Telco Customer Churn dataset (Kaggle)
+- 7,000+ customer records
+- Features: demographics, contract and subscription details, billing
+- Target: Churn (Yes/No)
 
-📊 **Evaluation Metrics**
-Since churn datasets are typically imbalanced (far fewer churners than non-churners), accuracy alone is misleading. This project evaluates models using:
+## Workflow
+1. **Data cleaning and validation (SQL):** queried, cleaned and validated
+   7,000+ customer records
+2. **Analysis:** compared churn across contract type and tenure
+3. **Machine learning:** trained [model name(s) you used] to predict churn
+4. **Dashboard:** built a React.js/TypeScript dashboard to present the
+   findings to stakeholders
 
-Precision & Recall — how many flagged churners were actually going to churn, and how many real churners did we catch
-F1 Score — balance between precision and recall
-ROC-AUC — overall ability to distinguish churners from non-churners
-Confusion Matrix — a clear view of false positives vs. false negatives
+ Key Finding
+Month-to-month customers churned at **42%**, compared with **11%** for
+long-term customers, a gap of about **3.8x**. This points to a clear
+retention opportunity.
+
+ Tech Stack
+SQL, Machine Learning ([libraries you used, e.g. scikit-learn]),
+React.js, TypeScript
+
 📈 **Key Insights**
 Customers on month-to-month contracts churn at a significantly higher rate than those on annual contracts
 Tenure is one of the strongest predictors — customers in their first few months are highest risk
